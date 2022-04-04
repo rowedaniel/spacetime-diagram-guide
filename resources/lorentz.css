@@ -42,6 +42,20 @@
     transform: translateX(6px) rotate(-26.565deg);
 }
 
+.train-diagonal {
+    top:    var(--grid-size);
+    height: calc(10 * var(--grid-size));
+    left:   calc(var(--grid-size) * 1/2);
+    transform: rotate(45deg) scale(2.449);
+    transform-origin: 1em 100%;
+}
+.train-diagonal .point {
+    transform: translate(-50%, -50%) scale(0.408) !important;
+}
+.train-diagonal .point span {
+    transform: translateX(6px);
+}
+
 
 .point.C {
     top: calc((1 - 0.866) * 10 * var(--grid-size));
@@ -50,7 +64,13 @@
 }
 
 .point.D {
-    top: calc(4 * var(--grid-size));
+    top: calc(5 * var(--grid-size));
+    left: 50%;
+    transform: translate(50% -50%);
+}
+
+.point.E {
+    top: calc((1 - 0.2887) * 10 * var(--grid-size));
     left: 50%;
     transform: translate(50% -50%);
 }
