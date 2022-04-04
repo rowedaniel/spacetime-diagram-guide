@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width = "100px" height = "100px" viewBox = "0 0 10 20">
+
+<!--<path stroke = "#FFCA00" stroke-width = "2" fill = "none"
+d = "M 0,0 c 0,3.642, 10.0,7.058, 10.0,10.0 c 0,3.642, -10.0,7.058, -10.0,10.0" />
+-->
+
+
+<path stroke = "#FFCA00" stroke-width = "2" fill = "none"
+d = "M 0,-5 c 0,3.642, 10.0,7.058, 10.0,10.0 c 0,3.642, -10.0,7.058, -10.0,10.0 c 0,3.642, 10.0,7.058, 10.0,10.0" />
+
+</svg>

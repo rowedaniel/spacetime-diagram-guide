@@ -1,0 +1,82 @@
+
+
+.diagram {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.axis {
+    --long-side: calc(100% - var(--grid-size) * 4);
+}
+
+
+
+
+.straight {
+    top:    var(--grid-size);
+    height: calc(8 * var(--grid-size));
+    left:   calc(var(--grid-size) * 17/2);
+    transform: rotate(90deg);
+    transform-origin: 1em 0;
+}
+.straight .point span {
+    transform: translateX(10px) rotate(-90deg);
+}
+
+.diagonal {
+    top:    var(--grid-size);
+    height: calc(8 * var(--grid-size));
+    left:   calc(var(--grid-size) * 1/2);
+    transform: rotate(45deg) scale(1.414);
+    transform-origin: 1em 100%;
+}
+.diagonal .point {
+    transform: translate(-50%, -50%) scale(0.707) !important;
+}
+.diagonal .point span {
+    transform: translateX(6px) rotate(-45deg);
+}
+
+.diagonal2 {
+    top:    calc(2 * var(--grid-size));
+    height: calc(6 * var(--grid-size));
+    left:   calc(var(--grid-size) * 17/2);
+    transform: rotate(-45deg) scale(1.414);
+    transform-origin: 1em 100%;
+}
+.diagonal2 .point {
+    transform: translate(-50%, -50%) scale(0.707) !important;
+}
+.diagonal2 .point span {
+    transform: translateX(3px) rotate(45deg);
+}
+
+
+
+
+
+
+
+#diagram1 .axis {
+    --long-side: calc(100%);
+}
+
+#diagram2 .diagram {
+    margin-top: 0;
+}
+
+
+#diagram4 #pointC {
+    left:   calc(var(--grid-size) * 6);
+    top:    calc(var(--grid-size) * 2);
+}
+
+#diagram4 #pointD {
+    left:   calc(var(--grid-size) * 2);
+    top:    calc(var(--grid-size) * 4);
+}
+
+#diagram4 #pointE {
+    left:   calc(var(--grid-size) * 8);
+    top:    calc(var(--grid-size) * 8);
+}

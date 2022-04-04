@@ -1,0 +1,329 @@
+:root {
+    --body-bg-color: #EFCE92;
+    --body-line-color: black;
+    --body-line-width: 0.1em;
+    --grid-size: 2em;
+    --body-line-pos: calc(var(--grid-size) - var(--body-line-width));
+    
+    --diagram-border-color: #1245FF;
+    --diagram-border-size: 0.2em;
+    --diagram-bg-color: #F2F2FF;
+    --diagram-line-color: black;
+    --diagram-line-width: 0.02em;
+    --diagram-line-pos: calc(var(--grid-size) - var(--diagram-line-width));
+    --axis-bg-color: white;
+    --axis-tick-len: calc(var(--grid-size) / 3);
+    --axis-tick-width: 0.1em;
+    --axis-tick-pos: calc(var(--grid-size) - var(--axis-tick-width));
+
+    --text-color: white;
+    --equation-color: #BFBFED;
+
+}
+
+
+body {
+    text-align: center;
+    font: 12pt "Andale Mono", Palatino, sans-serif;
+    background-color: var(--body-line-color);
+    background-image:
+        linear-gradient(var(--body-bg-color) var(--body-line-pos), transparent var(--body-line-pos)),
+        linear-gradient(90deg, var(--body-bg-color) var(--body-line-pos), transparent var(--body-line-pos));
+    background-size: var(--grid-size) var(--grid-size);
+    background-position: 50vw 0;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+}
+
+
+.grid-snap {
+    display: inline-block;
+    margin-top: var(--grid-size);
+}
+
+.grid-height-3 {
+    height: calc(var(--grid-size) * 3);
+}
+.grid-height-4 {
+    height: calc(var(--grid-size) * 4);
+}
+.grid-height-5 {
+    height: calc(var(--grid-size) * 5);
+}
+.grid-height-6 {
+    height: calc(var(--grid-size) * 6);
+}
+.grid-height-7 {
+    height: calc(var(--grid-size) * 7);
+}
+.grid-height-8 {
+    height: calc(var(--grid-size) * 8);
+}
+.grid-height-9 {
+    height: calc(var(--grid-size) * 9);
+}
+.grid-height-10 {
+    height: calc(var(--grid-size) * 10);
+}
+.grid-height-14 {
+    height: calc(var(--grid-size) * 14);
+}
+.grid-height-16 {
+    height: calc(var(--grid-size) * 16);
+}
+.grid-height-21 {
+    height: calc(var(--grid-size) * 21);
+}
+.grid-height-24 {
+    height: calc(var(--grid-size) * 24);
+}
+
+.grid-width-2 {
+    width: calc(var(--grid-size) * 2);
+}
+.grid-width-4 {
+    width: calc(var(--grid-size) * 4);
+}
+.grid-width-6 {
+    width: calc(var(--grid-size) * 6);
+}
+.grid-width-10 {
+    width: calc(var(--grid-size) * 10);
+}
+.grid-width-12 {
+    width: calc(var(--grid-size) * 12);
+}
+.grid-width-14 {
+    width: calc(var(--grid-size) * 14);
+}
+.grid-width-16 {
+    width: calc(var(--grid-size) * 16);
+}
+.grid-width-20 {
+    width: calc(var(--grid-size) * 20);
+}
+
+
+
+
+
+
+.diagram {
+    position: relative;
+    left: calc(-1 * var(--diagram-border-size));
+    top: calc(-1 * var(--diagram-border-size));
+    margin-top: var(--grid-size);
+
+    overflow: hidden;
+
+    border: var(--diagram-border-size) solid var(--diagram-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    background-color: var(--diagram-bg-color);
+    background-image:
+        linear-gradient(transparent var(--diagram-line-pos), var(--diagram-line-color) var(--diagram-line-pos)),
+        linear-gradient(90deg, transparent var(--diagram-line-pos), var(--diagram-line-color) var(--diagram-line-pos));
+    background-size: var(--grid-size) var(--grid-size);
+}
+
+.diagram > .graph-item {
+    position: absolute;
+    width:  var(--grid-size);
+}
+
+.diagram .graph-item .top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.diagram .graph-item .bottom {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+
+.diagram .point {
+    position: absolute;
+    margin: auto;
+
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background-color: #000000;
+    transform: translate(-50%, -50%);
+}
+
+.diagram .point.red {
+    background-color: #FF0000;
+}
+
+.point.big {
+    width: 20px;
+    height: 20px;
+}
+
+.diagram .point span {
+    position: relative;
+    left: 100%;
+    
+    display:grid;
+    height: 100%;
+    align-content:center;
+}
+
+.diagram .ray {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-position: bottom;
+}
+
+.diagram .ray.graph-animate.slide {
+    top: 100%;
+}
+
+.diagram .ray.graph-animate.slide.playing {
+    animation-name: rayslide;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.diagram .light {
+    background-image: url("light.svg");
+}
+
+.diagram .line {
+    background-image: url("line.svg");
+}
+
+
+@keyframes rayslide {
+  from { top: 100%; }
+  to   { top: 0; }
+}
+
+.axis {
+    position: absolute;
+    background-color: var(--axis-bg-color);
+    --long-side: calc(100%);
+    --short-side: calc(3 * var(--grid-size) - 2 * var(--diagram-border-size));
+    --border-style: 2px solid var(--diagram-line-color);
+}
+
+.axis.time {
+    right: 0;
+    top: 0;
+
+    height: var(--long-side);
+    width: var(--short-side);
+
+    border-left: var(--border-style);
+    border-bottom: var(--border-style);
+    background-image:
+        linear-gradient(transparent var(--axis-tick-pos), var(--diagram-line-color) var(--axis-tick-pos));
+    background-size: var(--axis-tick-len) var(--grid-size);
+    background-repeat: repeat-y;
+}
+
+.axis.time p {
+    margin: var(--grid-size) var(--axis-tick-len) 0 0;
+    height: 0;
+    position: relative;
+    top: -0.6em;
+}
+.axis.time .label {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: rotate(90deg) translateX(50%);
+    transform-origin: 100% 0;
+}
+
+
+.axis.space {
+    bottom: 0;
+    left: 0;
+
+    width: var(--long-side);
+    height: var(--short-side);
+    border-top: var(--border-style);
+    border-right: var(--border-style);
+    background-color: var(--axis-bg-color);
+    background-image:
+        linear-gradient(90deg, transparent var(--axis-tick-pos), var(--diagram-line-color) var(--axis-tick-pos));
+    background-size: var(--grid-size) var(--axis-tick-len);
+    background-repeat: repeat-x;
+}
+
+.axis.space p {
+    display: inline-block;
+    margin: var(--axis-tick-len) var(--grid-size) 0 0;
+    width: 0;
+    position: relative;
+    right: -1.2em;
+    transform: rotate(90deg);
+}
+.axis.space .label {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+.text {
+    margin: 0;
+    padding: 10px 30px;
+    width: 50em;
+
+    background-color: var(--text-color);
+    border-radius: 4px;
+
+    line-height: 1.2em;
+}
+
+.text ul {
+    margin-left: 3em;
+    text-align: left;
+}
+
+.text .equation {
+    background-color: var(--equation-color);
+    padding: 1px 2px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+
+.text input.anim-speed{
+    position: relative;
+    top: 0.6em;
+    margin-left: 10px;
+}
+
+.next-page {
+    display: block;
+
+    border: 1px solid #31a831;
+    padding: 14px 25px;
+    text-decoration: none;
+
+    background-color: #52D55B;
+    color: white;
+}
