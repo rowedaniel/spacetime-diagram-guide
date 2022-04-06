@@ -21,7 +21,9 @@ function updateAllPoints(X, CT)
     let [xP, ctP] = getCoords(X((n-1), n), CT((n-1), n), -v);
     document.getElementById("len-display").innerHTML = xP.toFixed(2);
     document.getElementById("time-display").innerHTML = ctP.toFixed(2);
-    document.getElementById("spacetime-display-1").innerHTML = (0*0 - 1*1).toFixed(2);
+    let x = X(1,2);
+    let ct = CT(1,2);
+    document.getElementById("spacetime-display-1").innerHTML = (ct*ct - x*x).toFixed(2);
     document.getElementById("spacetime-display-2").innerHTML = (ctP*ctP - xP*xP).toFixed(2);
 }
 

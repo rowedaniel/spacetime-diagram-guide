@@ -7,32 +7,48 @@
         <link rel="stylesheet" type="text/css" href="resources/diagrams.css">
     </head>
     <body>
-        <div class="grid-snap grid-height-16">
+        <div class="grid-snap grid-height-21">
             <h1>Daniel's Guide to Spacetime Diagrams</h1>
-            <h2>Velocity Addition</h2>
+            <h2>Concluding Remarks</h2>
             <div class="text ">
+                <p>
                 Special relativity introduces plenty of complexity, but spacetime diagrams, an event-based approach, and Lorentz transformations are helpful tools for making sense of various scenarios. Furthermore, we can use events and diagrams to show that at small speeds, relativity's equations for length, duration, and velocity addition reduce naturally to the more familiar classical mechanics equations.
+                </p>
+                <p>
+                Finally, I have one last graph. This graph shows spacetime distance, which is (time gap)^2 - (spacial gap)^2. Notice that the numbers are the same, regardless of which perspective we calculate them from (v can be anything!).
+                </p>
+                <p>Click to set a point, then click in a new location to set the second point.</p>
+                v/c = <span class="equation" id="v-display">-0.5</span><input type=range min=-0.99 max=0.99 step=0.01 value=-0.5 id="v-slider"></input>
+                <p>&Delta;x' (K') = <span id="len-display" class="equation"></span></p>
+                <p>&Delta;ct' (K') = <span id="time-display" class="equation"></span></p>
+                <p>spacetime distance (K) = <span id="spacetime-display-1" class="equation"></span></p>
+                <p>spacetime distance (K') = <span id="spacetime-display-2" class="equation"></span></p>
+            </div>
+        </div>
         <div id="diagram1">
             <div id="diagram1a" class="diagram grid-height-16 grid-width-16">
                 <div class="time axis"><span class="label">ct</span></div>
                 <div class="space axis"><span class="label">x</span></div>
                 <div class="point-cloud">
                     <div class="point"><span></span></div>
+                    <div class="special point"><span>A</span></div>
+                    <div class="special red point"><span>B</span></div>
                 </div>
             </div><div id="diagram1b" class="diagram grid-height-16 grid-width-16">
                 <div class="time axis"><span class="label">ct'</span></div>
                 <div class="space axis"><span class="label">x'</span></div>
                 <div class="point-cloud">
                     <div class="point"><span></span></div>
+                    <div class="special point"><span>A</span></div>
+                    <div class="special red point"><span>B</span></div>
                 </div>
             </div>
         </div>
 
-    <a href="time_dilation.html" class="next-page">Next Page</a>
-    <a href="intro.html" class="next-page">Previous Page</a>
+    <a href="velocity_addition.html" class="next-page">Previous Page</a>
 
     <script src="resources/script.js"></script>
-    <!--<script src="resources/diagrams.js"></script>-->
+    <script src="resources/diagrams.js"></script>
     </body>
 </html>
 
