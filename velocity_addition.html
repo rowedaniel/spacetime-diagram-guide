@@ -1,0 +1,122 @@
+
+
+
+
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <title>Spacetime Diagram Guide</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="resources/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/velocity_addition.css">
+    </head>
+    <body>
+        <div class="grid-snap grid-height-16">
+            <h1>Daniel's Guide to Spacetime Diagrams</h1>
+            <h2>Velocity Addition</h2>
+            <div class="text ">
+                <p>
+                Imagine that you are standing on the embankment, watching a train go by, and through the window, you see a ball rolling along the train’s floor. How fast is that ball moving? If the train is moving at velocity <em>v</em> with respect to embankment, and the ball is moving at velocity <em>w</em> with respect to the train, then classical mechanics tells us that the ball should be moving at velocity <em>(v+w)</em> with respect to the embankment.
+                </p>
+                <p>
+                As always, relativity complicates things. There are several ways to go about explaining why simple addition doesn't work, but I'm going to do it by using three spacetime diagrams. K will be the embankment, K' will be the train, and K'' will be the ball. As described above, <em>v</em> will be the velocity of K' with respect to K, and <em>w</em> will be the velocity of K'' with respect to K'.
+                <p>
+                </p>
+                This time, let's set event A to be at <span class="equation">x'' = 0</span>, <span class="equation">ct'' = 0</span>, and event B to be at <span class="equation">x'' = 0</span>, <span class="equation">ct'' = n</span>. For starters, let's look at K' and K'' side-by-side, and examine the resulting <span class="equation">&Delta;x'/&Delta;ct'</span> (computed numerically):
+                </p>
+                w/c = <span class="v-display equation" id="v-display1-1"></span><input type=range min=-0.99 max=0.99 step=0.01 value=0.5 id="v-slider1-1"></input>
+                final velocity (&Delta;x'/&Delta;ct') = <span class="v-display equation" id="final-v-1"></span>
+
+            </div>
+        </div>
+        <div id="diagram1">
+            <div class="diagram grid-height-16 grid-width-16">
+                <div class="time axis"><span class="label">ct'</span></div>
+                <div class="space axis"><span class="label">x'</span></div>
+                <div class="point-cloud">
+                    <div class="point"><span>A</span></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"><span>B</span></div>
+                </div>
+            </div><div class="diagram grid-height-16 grid-width-16">
+                <div class="time axis"><span class="label">ct''</span></div>
+                <div class="space axis"><span class="label">x''</span></div>
+                <div class="point-cloud">
+                    <div class="point"><span>A</span></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"><span>B</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-snap grid-height-4">
+            <div class="text">
+                <p>K' and K'' behave as expected. What about if we add K to the mix? (you might have to zoom out for best effect)</p>
+                v/c = <span class="v-display equation" id="v-display2-2"></span><input type=range min=-0.99 max=0.99 step=0.01 value=0.5 id="v-slider2-2"></input>
+                w/c = <span class="v-display equation" id="v-display2-1"></span><input type=range min=-0.99 max=0.99 step=0.01 value=0.5 id="v-slider2-1"></input>
+                <p>
+                final velocity (&Delta;x/&Delta;ct) = <span class="v-display equation" id="final-v-2"></span>
+                </p>
+            </div>
+        </div>
+
+        <div id="diagram2">
+            <div class="diagram grid-height-16 grid-width-16">
+                <div class="time axis"><span class="label">ct</span></div>
+                <div class="space axis"><span class="label">x</span></div>
+                <div class="point-cloud">
+                    <div class="point"><span>A</span></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"><span>B</span></div>
+                </div>
+            </div><div class="diagram grid-height-16 grid-width-16">
+                <div class="time axis"><span class="label">ct'</span></div>
+                <div class="space axis"><span class="label">x'</span></div>
+                <div class="point-cloud">
+                    <div class="point"><span>A</span></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"><span>B</span></div>
+                </div>
+            </div><div class="diagram grid-height-16 grid-width-16">
+                <div class="time axis"><span class="label">ct''</span></div>
+                <div class="space axis"><span class="label">x''</span></div>
+                <div class="point-cloud">
+                    <div class="point"><span>A</span></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"></div>
+                    <div class="point"></div>
+                    <div class="red point"><span>B</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-snap grid-height-16">
+            <div class="text">
+                <p>
+                If the velocity was truely additive, then they should add up! Instead, we get 0.5 + 0.5 = 0.8. In fact, pretty much the only time that the addition works as expected is when either v or w is extremely close to 0 (though it's also worthy of note that it works when <span class="equation">v + w = 0</span>).
+                </p>
+                <p>
+                Consider the following math describing this same process:
+                </p>
+            </div>
+        </div>
+
+
+        <a href="length_contraction.html" class="next-page">Previous Page</a>
+
+        <script src="resources/script.js"></script>
+        <script src="resources/velocity_addition.js"></script>
+    </body>
+</html>

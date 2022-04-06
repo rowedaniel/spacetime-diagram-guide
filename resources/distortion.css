@@ -1,0 +1,22 @@
+
+.diagram {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.axis {
+    --long-side: calc(100% - var(--grid-size) * 4);
+}
+
+.text img {
+    width: 40%;
+}
+
+#diagram1 .diagram {
+    display: inline-block;
+}
+
+#v-display, #len-display, #time-display, #spacetime-display {
+    display: inline-block;
+    width: 60px;
+}

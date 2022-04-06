@@ -60,13 +60,13 @@ Consider the following graph, using co-ordinate system K:
                 <p>From the embankment's perspective, the train is moving, so it's natural that the two events shouldn't be in the same place/time. In this example, it looks like event A is observed at x'=0,ct'=0, and event C is observed at x'=0.5, ct'=1. Doing a simple division tells us that according to K', K seems to be moving <span class="equation">&Delta;x'/&Delta;ct' = (0.5-0) / (1-0) = 0.5</span>, meaning <span class="equation">&Delta;x'/&Delta;t' = v = (0.5)c</span>, so K is moving half at the speed of light in the positive direction (relative to K'). You could thus also say that K' is moving at -c/2 relative to K.
                 </p>
                 <p>
-                One very important consequence of relativity is that in the K' diagram, the second event is <em>not</em> event B, but rather event C. Since event B occurs at ct=1, it's tempting to assume that it would appear at ct'=1, but one must always remember that ct and ct' are completely different scales. That is, time is <em>not</em> percieved as the same.
+                One very important consequence of relativity is that in the K' diagram, the second event is <em>not</em> event B, but rather event C. Since event B occurs at ct=1, it's tempting to assume that it would appear at ct'=1, but one must always remember that ct and ct' are completely different scales. That is, time is <em>not</em> percieved as the same according to different perspectives.
                 </p>
                 <p>
                 Lorentz transformations are a convenient way of converting from one co-ordinate system to anothers:
                 </p>
                 <img src="resources/lorentz.png" alt="lorentz transformations">
-                <p>Consider the following diagrams, with K on the left, and K' on the right (v=-c/2).</p>
+                <p>Consider the following diagrams, with K on the left, and K' on the right (v=-c/2). The location/time of each event was calculated using Lorentz transformations.</p>
 
 
             </div>
@@ -119,10 +119,35 @@ Consider the following graph, using co-ordinate system K:
                 </div>
             </div>
         </div>
+        <div class="grid-snap grid-height-4">
+            <div class="text">
+                <p>Finally, I've created an interactive diagram below. Hover your mouse over one of the graphs, and the point should update on both. Also try dragging the slider around to change v!
+                </p>
+                v/c = <span class="equation" id="v-display">0</span><input type=range min=-0.9 max=0.9 step=0.1 value=0.5 id="v-slider"></input>
 
-        <a href="time_dilation.html" class="next-page">Next Page</a>
-        <a href="intro.html" class="next-page">Previous Page</a>
+            </div>
+        </div>
+        <div id="diagram4">
+            <div id="diagram4a" class="diagram grid-height-16 grid-width-16">
+                <div class="time axis"><span class="label">ct</span></div>
+                <div class="space axis"><span class="label">x</span></div>
+                <div class="point-cloud">
+                    <div class="point"><span></span></div>
+                </div>
+            </div><div id="diagram4b" class="diagram grid-height-16 grid-width-16">
+                <div class="time axis"><span class="label">ct'</span></div>
+                <div class="space axis"><span class="label">x'</span></div>
+                <div class="point-cloud">
+                    <div class="point"><span></span></div>
+                </div>
+            </div>
+        </div>
+
+    <a href="time_dilation.html" class="next-page">Next Page</a>
+    <a href="intro.html" class="next-page">Previous Page</a>
+
     <script src="resources/script.js"></script>
+    <script src="resources/lorentz.js"></script>
     </body>
 </html>
 

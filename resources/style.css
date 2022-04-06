@@ -77,6 +77,9 @@ h1 {
 .grid-height-16 {
     height: calc(var(--grid-size) * 16);
 }
+.grid-height-19 {
+    height: calc(var(--grid-size) * 19);
+}
 .grid-height-21 {
     height: calc(var(--grid-size) * 21);
 }
@@ -85,6 +88,9 @@ h1 {
 }
 .grid-height-27 {
     height: calc(var(--grid-size) * 27);
+}
+.grid-height-30 {
+    height: calc(var(--grid-size) * 30);
 }
 
 .grid-width-2 {
@@ -134,6 +140,12 @@ h1 {
         linear-gradient(transparent var(--diagram-line-pos), var(--diagram-line-color) var(--diagram-line-pos)),
         linear-gradient(90deg, transparent var(--diagram-line-pos), var(--diagram-line-color) var(--diagram-line-pos));
     background-size: var(--grid-size) var(--grid-size);
+}
+
+.diagram > .point-cloud {
+    width: 100%;
+    height: 100%;
+    position:relative;
 }
 
 .diagram > .graph-item {
@@ -317,10 +329,10 @@ h1 {
 }
 
 
-.text input.anim-speed{
+.text input {
     position: relative;
     top: 0.6em;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 .next-page {

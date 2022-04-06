@@ -60,19 +60,16 @@
 .point.C {
     top: calc((1 - 0.866) * 10 * var(--grid-size));
     left: 50%;
-    transform: translate(50% -50%);
 }
 
 .point.D {
     top: calc(5 * var(--grid-size));
     left: 50%;
-    transform: translate(50% -50%);
 }
 
 .point.E {
     top: calc((1 - 0.2887) * 10 * var(--grid-size));
     left: 50%;
-    transform: translate(50% -50%);
 }
 
 
@@ -110,3 +107,8 @@
 #diagram3 .diagram {
     display: inline-block;
 }
+
+#diagram4 .diagram {
+    display: inline-block;
+}
+

@@ -24,6 +24,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
     }
 
 
+
     for(let obj of document.querySelectorAll(".anim-speed")) {
         obj.addEventListener("change", function(event) {
             ANIMATION_SPEED = obj.value;
@@ -52,3 +53,43 @@ function playAnimation(diagram_sel) {
     }
 
 }
+
+
+function getCoords(x_p, ct_p, v_over_c) {
+    const lorentz_coeff = 1 / Math.sqrt(1 - v_over_c*v_over_c);
+    return [(x_p + ct_p * v_over_c) * lorentz_coeff, (ct_p + x_p * v_over_c) * lorentz_coeff];
+}
+
+function getWidth(obj) {
+    return Math.floor(obj.offsetHeight/GRID_SIZE) - 5;
+}
+function getHeight(obj) {
+    return Math.floor(obj.offsetWidth/GRID_SIZE)  - 5;
+}
+
+
+
+function placePoint(point, x, ct) {
+    const width  = getWidth(point.parentElement);
+    const height = getHeight(point.parentElement);
+    let left   = (x  * height + 1)       * GRID_SIZE;
+    let bottom = (ct * height + (5-1/2)) * GRID_SIZE;
+    /*
+    console.log("height:",height);
+    console.log("x,ct:", x, ct);
+    console.log("left,bottom:", left, bottom);
+    */
+    point.style.left = left + "px";
+    point.style.bottom = bottom + "px";
+}
+
+function updatePoint(point, x, ct, v_over_c, isK) {
+    let xP,ctP;
+    if(isK) {
+        [xP,ctP] = getCoords(x, ct, v_over_c);
+    } else {
+        [xP,ctP] = getCoords(x, ct, -v_over_c);
+    }
+    placePoint(point, xP, ctP);
+}
+
