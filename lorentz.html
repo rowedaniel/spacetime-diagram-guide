@@ -55,7 +55,7 @@ Consider the following graph, using co-ordinate system K':
                 <div class="point C"><span>C</span></div>
             </div>
         </div>
-        <div class="grid-snap grid-height-27">
+        <div class="grid-snap grid-height-32">
             <div class="text">
                 <p>From the embankment's perspective, the train is moving, so it's natural that the two events shouldn't be in the same place/time. In this example, it looks like event A is observed at x=0,ct=0, and event C is observed at x=0.5, ct=1. Doing a simple division tells us that according to K, K' seems to be moving <span class="equation">&Delta;x/&Delta;ct = (0.5-0) / (1-0) = 0.5</span>, meaning <span class="equation">&Delta;x/&Delta;t = v = (0.5)c</span>, so K' is moving half at the speed of light in the positive direction (relative to K). Note that you could thus also say that K is moving at -c/2 relative to K'.
                 </p>
@@ -66,7 +66,7 @@ Consider the following graph, using co-ordinate system K':
                 Lorentz transformations are a convenient way of converting an event's x/ct values from one co-ordinate system to another:
                 </p>
                 <img src="resources/lorentz.png" alt="lorentz transformations">
-                <p>Consider the following diagrams, with K on the left, and K' on the right (v=c/2). The location/time of each event was calculated using Lorentz transformations.</p>
+                <p>Consider the following diagrams, with K (embankment) on the left, and K' (train) on the right (v=c/2). The location/time of each event was calculated using Lorentz transformations.</p>
 
 
             </div>
@@ -75,6 +75,28 @@ Consider the following graph, using co-ordinate system K':
             <div class="diagram grid-height-16 grid-width-16">
                 <div class="time axis"><span class="label">ct</span></div>
                 <div class="space axis"><span class="label">x</span></div>
+                <div class="train graph-item">
+                    <div class="ray line"></div>
+                    <div class="point bottom"><span>A</span></div>
+                    <div class="point C"><span>C</span></div>
+                    <div class="point D"><span>B</span></div>
+                </div>
+                <div class="train-right graph-item">
+                    <div class="ray line"></div>
+                    <div class="point top"><span>G</span></div>
+                    <div class="point C"><span>F</span></div>
+                    <div class="point D"><span>E</span></div>
+                </div>
+                <div class="train-diagonal graph-item">
+                    <div class="ray line"></div>
+                    <div class="point top"><span>K</span></div>
+                    <div class="point C"><span>J</span></div>
+                    <div class="point D"><span>I</span></div>
+                    <div class="point E"><span>H</span></div>
+                </div>
+            </div><div class="diagram grid-height-16 grid-width-16">
+                <div class="time axis"><span class="label">ct'</span></div>
+                <div class="space axis"><span class="label">x'</span></div>
                 <div class="straight graph-item">
                     <div class="ray line"></div>
                     <div class="point bottom"><span>A</span></div>
@@ -89,28 +111,6 @@ Consider the following graph, using co-ordinate system K':
                     <div class="point D"><span>E</span></div>
                 </div>
                 <div class="diagonal graph-item">
-                    <div class="ray line"></div>
-                    <div class="point top"><span>K</span></div>
-                    <div class="point C"><span>J</span></div>
-                    <div class="point D"><span>I</span></div>
-                    <div class="point E"><span>H</span></div>
-                </div>
-            </div><div class="diagram grid-height-16 grid-width-16">
-                <div class="time axis"><span class="label">ct'</span></div>
-                <div class="space axis"><span class="label">x'</span></div>
-                <div class="train graph-item">
-                    <div class="ray line"></div>
-                    <div class="point bottom"><span>A</span></div>
-                    <div class="point C"><span>C</span></div>
-                    <div class="point D"><span>B</span></div>
-                </div>
-                <div class="train-right graph-item">
-                    <div class="ray line"></div>
-                    <div class="point top"><span>G</span></div>
-                    <div class="point C"><span>F</span></div>
-                    <div class="point D"><span>E</span></div>
-                </div>
-                <div class="train-diagonal graph-item">
                     <div class="ray line"></div>
                     <div class="point top"><span>K</span></div>
                     <div class="point C"><span>J</span></div>

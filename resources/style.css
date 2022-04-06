@@ -92,6 +92,9 @@ h1 {
 .grid-height-30 {
     height: calc(var(--grid-size) * 30);
 }
+.grid-height-32 {
+    height: calc(var(--grid-size) * 32);
+}
 .grid-height-40 {
     height: calc(var(--grid-size) * 40);
 }
