@@ -11,7 +11,9 @@
 }
 
 .text img {
-    width: 40%;
+    width: 90%;
+    position: relative;
+    left: 30px;
 }
 
 #diagram2 {
