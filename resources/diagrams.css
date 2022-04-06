@@ -1,0 +1,114 @@
+.diagram {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.axis {
+    --long-side: calc(100% - var(--grid-size) * 4);
+}
+
+.straight {
+    top:    var(--grid-size);
+    height: calc(10 * var(--grid-size));
+    left:   calc(var(--grid-size) * 1/2);
+    transform-origin: 1em 0;
+}
+
+.train {
+    top:    var(--grid-size);
+    height: calc(10 * var(--grid-size));
+    left:   calc(var(--grid-size) * 1/2);
+    transform: rotate(26.565deg) scale(1.291);
+    transform-origin: 1em 100%;
+}
+.train .point {
+    transform: translate(-50%, -50%) scale(0.894) !important;
+}
+.train .point span {
+    transform: translateX(6px) rotate(-26.565deg);
+}
+
+.train-right {
+    top:    var(--grid-size);
+    height: calc(10 * var(--grid-size));
+    left:   calc(var(--grid-size) * 1/2);
+    transform: rotate(calc(90deg - 26.565deg)) scale(1.291);
+    transform-origin: 1em 100%;
+}
+.train-right .point {
+    transform: translate(-50%, -50%) scale(0.894) !important;
+}
+.train-right .point span {
+    transform: translateX(6px) rotate(-26.565deg);
+}
+
+.train-diagonal {
+    top:    var(--grid-size);
+    height: calc(10 * var(--grid-size));
+    left:   calc(var(--grid-size) * 1/2);
+    transform: rotate(45deg) scale(2.449);
+    transform-origin: 1em 100%;
+}
+.train-diagonal .point {
+    transform: translate(-50%, -50%) scale(0.408) !important;
+}
+.train-diagonal .point span {
+    transform: translateX(6px);
+}
+
+
+.point.C {
+    top: calc((1 - 0.866) * 10 * var(--grid-size));
+    left: 50%;
+}
+
+.point.D {
+    top: calc(5 * var(--grid-size));
+    left: 50%;
+}
+
+.point.E {
+    top: calc((1 - 0.2887) * 10 * var(--grid-size));
+    left: 50%;
+}
+
+
+
+.straight-right {
+    top:    var(--grid-size);
+    height: calc(10 * var(--grid-size));
+    left:   calc(var(--grid-size) * 1/2);
+    transform-origin: 1em 100%;
+    transform: rotate(90deg);
+}
+.straight-right .point {
+    transform: translate(-50%, -50%) !important;
+}
+.straight-right .point span {
+    transform: translateX(6px) rotate(-90deg);
+}
+
+.diagonal {
+    top:    var(--grid-size);
+    height: calc(10 * var(--grid-size));
+    left:   calc(var(--grid-size) * (10 + 1/2));
+    transform-origin: 1em 0;
+    transform: rotate(45deg) scale(1.414);
+}
+.diagonal .point {
+    transform: translate(-50%, -50%) scale(0.707) !important;
+}
+.diagonal .point span {
+    transform: translateX(6px) rotate(-45deg);
+}
+
+
+
+#diagram3 .diagram {
+    display: inline-block;
+}
+
+#diagram1 .diagram {
+    display: inline-block;
+}
+
