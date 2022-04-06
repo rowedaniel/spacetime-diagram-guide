@@ -6,10 +6,10 @@ window.addEventListener("DOMContentLoaded", function(event) {
         let point = obj.querySelector(".point");
 
         let otherSelector = "diagram4a";
-        let isK = false;
+        let isK = true;
         if(obj.parentElement.id === "diagram4a") {
             otherSelector = "diagram4b";
-            isK = true;
+            isK = false;
         }
         otherSelector = "#" + otherSelector + " .point";
         let otherPoint = document.querySelector(otherSelector);

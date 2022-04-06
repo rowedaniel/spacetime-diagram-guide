@@ -15,7 +15,7 @@ function updateAllPoints(X, CT)
         let x = X(i,n);
         let ct = CT(i,n);
         placePoint(aPoints[i], x, ct);
-        updatePoint(bPoints[i], x, ct, v, true);
+        updatePoint(bPoints[i], x, ct, v, false);
     }
 
     let [xP, ctP] = getCoords(X((n-1), n), CT((n-1), n), -v);
