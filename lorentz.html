@@ -17,14 +17,14 @@
 So we've talked about spacetime diagrams, but what about looking at things from different perspectives (inertial reference frames)?
                 </p>
                 <p>
-Consider the following graph, using co-ordinate system K:
+Consider the following graph, using co-ordinate system K':
                 </p>
                 <button onclick="playAnimation('#diagram1');">play</button><input type=range min=0.5 max=20 value=10 class="anim-speed"></input>
             </div>
         </div>
         <div id="diagram1" onclick="playAnimation('#diagram1');" class="diagram grid-height-16 grid-width-16">
-            <div class="time axis"><span class="label">ct</span></div>
-            <div class="space axis"><span class="label">x</span></div>
+            <div class="time axis"><span class="label">ct'</span></div>
+            <div class="space axis"><span class="label">x'</span></div>
             <div class="straight graph-item">
                 <div class="ray line"></div>
                 <div class="ray graph-animate slide">
@@ -37,15 +37,15 @@ Consider the following graph, using co-ordinate system K:
         </div>
         <div class="grid-snap grid-height-7">
             <div class="text">
-                <p>Notice that the point (red circle) is at x=0 regardless of time.</p>
+                <p>Notice that the point (red circle) is at x'=0 regardless of time.</p>
                 <p>Let's say that the above graph represents a location on a train. From the perspective of everyone on the train, it doesn't look like the point is moving. Of course, from the point's perspective, it <em>really</em> doesn't look like it's moving.</p>
-                <p>Next, let's examine the same events A and B, but from the perspective of the embankment (co-ordinate system K').</p>
+                <p>Next, let's examine the same events A and B, but from the perspective of the embankment (co-ordinate system K).</p>
                 <button onclick="playAnimation('#diagram2');">play</button><input type=range min=0.5 max=20 value=10 class="anim-speed"></input>
             </div>
         </div>
         <div id="diagram2" onclick="playAnimation('#diagram2');" class="diagram grid-height-16 grid-width-16">
-            <div class="time axis"><span class="label">ct'</span></div>
-            <div class="space axis"><span class="label">x'</span></div>
+            <div class="time axis"><span class="label">ct</span></div>
+            <div class="space axis"><span class="label">x</span></div>
             <div class="train graph-item">
                 <div class="ray line"></div>
                 <div class="ray graph-animate slide">
@@ -57,16 +57,16 @@ Consider the following graph, using co-ordinate system K:
         </div>
         <div class="grid-snap grid-height-27">
             <div class="text">
-                <p>From the embankment's perspective, the train is moving, so it's natural that the two events shouldn't be in the same place/time. In this example, it looks like event A is observed at x'=0,ct'=0, and event C is observed at x'=0.5, ct'=1. Doing a simple division tells us that according to K', K seems to be moving <span class="equation">&Delta;x'/&Delta;ct' = (0.5-0) / (1-0) = 0.5</span>, meaning <span class="equation">&Delta;x'/&Delta;t' = v = (0.5)c</span>, so K is moving half at the speed of light in the positive direction (relative to K'). You could thus also say that K' is moving at -c/2 relative to K.
+                <p>From the embankment's perspective, the train is moving, so it's natural that the two events shouldn't be in the same place/time. In this example, it looks like event A is observed at x=0,ct=0, and event C is observed at x=0.5, ct=1. Doing a simple division tells us that according to K, K' seems to be moving <span class="equation">&Delta;x/&Delta;ct = (0.5-0) / (1-0) = 0.5</span>, meaning <span class="equation">&Delta;x/&Delta;t = v = (0.5)c</span>, so K' is moving half at the speed of light in the positive direction (relative to K). Note that you could thus also say that K' is moving at -c/2 relative to K.
                 </p>
                 <p>
-                One very important consequence of relativity is that in the K' diagram, the second event is <em>not</em> event B, but rather event C. Since event B occurs at ct=1, it's tempting to assume that it would appear at ct'=1, but one must always remember that ct and ct' are completely different scales. That is, time is <em>not</em> percieved as the same according to different perspectives.
+                One very important consequence of relativity is that in the K diagram, the second event is <em>not</em> event B, but rather event C. Since event B occurs at ct'=1, it's tempting to assume that it would appear at ct=1, but one must always remember that ct and ct' are completely different scales. That is, time is <em>not</em> percieved as the same according to different perspectives.
                 </p>
                 <p>
                 Lorentz transformations are a convenient way of converting an event's x/ct values from one co-ordinate system to another:
                 </p>
                 <img src="resources/lorentz.png" alt="lorentz transformations">
-                <p>Consider the following diagrams, with K on the left, and K' on the right (v=-c/2). The location/time of each event was calculated using Lorentz transformations.</p>
+                <p>Consider the following diagrams, with K on the left, and K' on the right (v=c/2). The location/time of each event was calculated using Lorentz transformations.</p>
 
 
             </div>
